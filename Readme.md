@@ -73,24 +73,22 @@
 ### 從GitHub下載並執行
 
 1. 先把專案clone下來:
-git clone https://github.com/你的GitHub帳號/訂單處理API.git
-cd 訂單處理API
+git clone https://github.com/TseAnLin/AsiaYo_API_Test.git
+cd AsiaYo_API_Test
 
-2. 安裝需要的套件:
-pip install -r requirements.txt
-
-3. 啟動伺服器:
-uvicorn app.main:app --reload
-
-4. 打開瀏覽器網址輸入 `http://localhost:8000/docs` 就可以看到API文件
-
-### 使用Docker
-
-1. 建立Docker映像檔:
+2. 建立Docker image:
 docker build -t fastapi-app .
 
-2. 執行Docker容器:
+3. 執行Docker Container:
 docker run -d -p 8000:8000 fastapi-app
 
-3. 一樣打開瀏覽器並輸入 `http://localhost:8000/docs` 就可以使用API了
+3. 打開瀏覽器並輸入 `http://localhost:8000/docs` 就可以使用API了
 
+
+### 測試
+
+1. 進入容器內部
+docker exec -it fastapi-container /bin/sh
+
+2. 進行測試
+pytest tests/
