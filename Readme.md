@@ -73,14 +73,20 @@
 ### 從GitHub下載並執行
 
 1. 先把專案clone下來:
+```
 git clone https://github.com/TseAnLin/AsiaYo_API_Test.git
 cd AsiaYo_API_Test
+```
 
 2. 建立Docker image:
+```
 docker build -t fastapi-app .
+```
 
 3. 執行Docker Container:
+```
 docker run -d -p 8000:8000 fastapi-app
+```
 
 3. 打開瀏覽器並輸入 `http://localhost:8000/docs` 就可以使用API了
 
