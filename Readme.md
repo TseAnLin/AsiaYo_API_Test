@@ -88,7 +88,11 @@ docker run -d -p 8000:8000 fastapi-app
 ### 測試
 
 1. 進入容器內部
+```
 docker exec -it fastapi-container /bin/sh
+```
 
 2. 進行測試
+```
 pytest tests/
+```
