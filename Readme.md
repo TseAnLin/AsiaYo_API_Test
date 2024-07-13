@@ -1,6 +1,8 @@
 # 訂單處理API
 
 ## 程式碼架構
+
+```plaintext
 .
 ├── app/
 │   ├── __init__.py              # 初始化程式
@@ -8,14 +10,14 @@
 │   ├── main.py                  # FastAPI 主程式
 │   ├── schemas.py               # Pydantic 模型定義
 │   ├── services/                # 服務模組
-│   ├── __init__.py              # 初始化程式
+│   │   ├── __init__.py          # 初始化程式
 │   │   ├── currency_service.py  # 貨幣轉換服務
 │   │   └── order_service.py     # 訂單處理服務
 │   ├── transformers/            # 轉換模組
-│   ├── __init__.py              # 初始化程式
+│   │   ├── __init__.py          # 初始化程式
 │   │   └── order_transformer.py # 訂單轉換
 │   └── validators/              # 驗證模組
-│   ├── __init__.py              # 初始化程式
+│       ├── __init__.py          # 初始化程式
 │       └── order_validator.py   # 訂單驗證
 ├── tests/
 │   ├── __init__.py              # 初始化程式
@@ -23,6 +25,7 @@
 ├── Dockerfile                   # Docker 設定檔
 ├── README.md                    # 專案說明文件
 └── requirements.txt             # 依賴包列表
+
 
 
 ## 主要功能
@@ -62,7 +65,7 @@
    - FastAPI的 `Depends` 扮演了工廠的角色,幫我們建立需要的物件。
 
 3. Singleton Pattern:
-   - `get_settings` method使用了 `lru_cache` decorator,確保只建立一個 `Settings` 實例。
+   - `get_settings` 方法使用了 `lru_cache` decorator,確保只建立一個 `Settings` 實例。
 
 
 ## 如何使用
