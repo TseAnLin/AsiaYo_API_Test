@@ -85,10 +85,10 @@ docker build -t fastapi-app .
 
 3. 執行Docker Container:
 ```
-docker run -d -p 8000:8000 fastapi-app
+docker run -d --name fastapi-container -p 8000:8000 fastapi-app
 ```
 
-3. 打開瀏覽器並輸入 `http://localhost:8000/docs` 就可以使用API了
+4. 打開瀏覽器並輸入 `http://localhost:8000/docs` 就可以使用API了
 
 
 ### 測試
