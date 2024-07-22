@@ -3,7 +3,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     # App settings
-    usd_to_twd_rate: float = 32.53
+    usd_to_twd_rate: float = 31
 
     class Config:
         env_file = ".env"
