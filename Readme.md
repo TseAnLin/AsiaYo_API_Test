@@ -58,13 +58,10 @@
 
 這個專案也用了一些設計模式:
 
-1. Strategy Pattern:
-   - `OrderValidator` 和 `OrderTransformer` 可以視為不同的策略,允許在執行期間切換不同的驗證或轉換策略。
-
-2. Factory Pattern:
+1. Factory Pattern:
    - FastAPI的 `Depends` 扮演了工廠的角色,幫我們建立需要的物件。
 
-3. Singleton Pattern:
+2. Singleton Pattern:
    - `get_settings` 方法使用了 `lru_cache` decorator,確保只建立一個 `Settings` 實例。
 
 
