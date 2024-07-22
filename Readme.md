@@ -46,7 +46,7 @@
    - 使用依賴注入,讓我們可以輕鬆擴展功能而不用改動現有程式碼。
 
 3. Liskov substitution principle:
-   - 但我們的設計允許使用子類別替換父類別。
+   - 這個專案沒明顯地使用Liskov，但我們的設計允許使用子類別替換父類別。
 
 4. Interface segregation principle:
    - 每個介面都很精簡。像是 `OrderValidator` 只有一個 `validate` 方法。
